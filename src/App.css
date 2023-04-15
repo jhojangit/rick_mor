@@ -33,8 +33,11 @@ img{
 }
 
 .header__img{
-    height: 170px;
-
+    height: 200px;
+    background-image: url("images/rick2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .location__container{
@@ -192,9 +195,7 @@ form button{
 
 
 @media  (min-width: 550px){
-    .header__img{
-        height: 300px;
-    }
+    
     .location__info{
         width: 80%;
     }
@@ -209,12 +210,7 @@ form button{
 
 
 @media  (min-width: 800px){
-    .header__img{
-        width: 100%;
-        height: 330px;
-        object-fit: cover;
-        object-position: top;
-    }
+
     .location__info{
         width: 60%;
     }

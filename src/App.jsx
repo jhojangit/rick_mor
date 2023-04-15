@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img className='header__img' src=".\src\images\rick2.jpg" alt="" />
+        <div className="header__img"></div>
       </header>
 
       <div className="location__container">
