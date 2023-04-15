@@ -16,7 +16,7 @@ function App() {
   const url = `https://rickandmortyapi.com/api/location/${inputValue}`
   const locations = useFetch(url)
 
-
+  
   const inputLocation = useRef()
 
   const handleSubmit = (e) => {

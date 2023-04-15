@@ -7,7 +7,7 @@ const Loading = lazy(() => import('./Loading'));
 const ResidentCard = ({ url }) => {
 
     const resident = useFetch(url)
-
+    //console.log(url);
 
     return (
         <Suspense fallback={<Loading/>}>
