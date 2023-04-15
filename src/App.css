@@ -1,0 +1,228 @@
+:root{
+    --background: rgb(48, 48, 67);
+    --card-color: rgb(30, 30, 52);
+    --colorFont: rgb(255, 255, 255);
+    --colorAlive: rgb(17, 150, 79);
+    --colorDead: rgb(156, 17, 17);
+    --colorUnknown: rgb(34, 109, 184);
+    --colorLocationName: rgb(91, 231, 122);
+    --span: rgb(187, 187, 187);
+
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    color: var(--colorFont);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: var(--background);
+}
+
+img{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.App{
+    background-color: var(--background);
+    
+}
+
+.header__img{
+    height: 170px;
+
+}
+
+.location__container{
+    background-color: var(--background);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+form input{
+    color: var(--colorAlive);
+    font-size: 20px;
+    border: 1pc transparent;
+    border-radius: 1rem 0  0 1rem;
+    text-align: center;
+    outline: none;
+}
+
+form button{
+    color: var(--colorFont);
+    background-color: var(--colorAlive);
+    font-size: 20px;
+    border: 1pc transparent;
+    border-radius: 0 1rem  1rem 0;
+    padding: 0 1rem 0 1rem;
+}
+
+
+
+
+.location__info{
+    background-color: var(--card-color);
+    padding: 2rem .5rem 2rem .5rem;
+    border-radius: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+
+.location__info h2{
+    color: var(--colorLocationName);
+}
+
+.location__info ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    text-align: center;
+}
+
+.location__info span{
+    color: var(--span);
+}
+
+
+
+.container_residents{
+    background-color: var(--background);
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+.container_card{
+    display: flex;
+    max-width: 450px;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--card-color);
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.card__header{
+    position: relative;
+}
+
+.card__header__img{
+    width: 90%;
+    
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+.card__container__status{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: var(--card-color);
+    padding: .5rem;
+    padding-left: 2rem;
+    display: flex;
+    border-radius: 0 .7rem .7rem 0;
+}
+
+.circle{
+    position: absolute;
+    background-color: var(--colorUnknown);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: 10px;
+}
+
+.Alive{
+    background-color: var(--colorAlive);
+}
+
+
+.Dead{
+    background-color: var(--colorDead);
+}
+
+
+.card__name{
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.card__info{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    list-style: none;
+}
+
+.card__info .li{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .2rem;
+}
+
+.card__info .li .span{
+    margin-left: 1rem;
+    left: 15px;    
+    color: var(--span);
+}
+
+
+@media  (min-width: 550px){
+    .header__img{
+        height: 300px;
+    }
+    .location__info{
+        width: 80%;
+    }
+
+    .container_residents{
+        background-color: var(--background);
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+
+@media  (min-width: 800px){
+    .header__img{
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .location__info{
+        width: 60%;
+    }
+
+    .container_residents{
+        background-color: var(--background);
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
