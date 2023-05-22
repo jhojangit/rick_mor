@@ -42,17 +42,22 @@ function App() {
       <div className="location__container">
         <h3>Search a location</h3>
         <form onSubmit={handleSubmit} action="">
-          <input ref={inputLocation} type="number" name="" id="" placeholder='Type a number' required />
+          <input ref={inputLocation} type="number" name="" id="" placeholder={inputValue} required />
           <button type="submit">Submit</button>
         </form >
         {
           numberErr && <h2>you must write a number between 1 and 126</h2>
         }
+
+
+        
         {
           LocationInfo &&
           <LocationInfo location={locations} />
         }
       </div>
+
+
 
       <div className='container_residents'>
         {
