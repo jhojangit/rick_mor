@@ -40,10 +40,10 @@ function App() {
       </header>
 
       <div className="location__container">
-        <h3>Search a location</h3>
+        <h3>Search a location by number  1 / 126</h3>
         <form onSubmit={handleSubmit} action="">
           <input ref={inputLocation} type="number" name="" id="" placeholder={inputValue} required />
-          <button type="submit">Submit</button>
+          <button type="submit">Search</button>
         </form >
         {
           numberErr && <h2>you must write a number between 1 and 126</h2>
